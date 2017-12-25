@@ -1,0 +1,8 @@
+1513912595a:1:{s:16:"site/scripts.htm";a:5:{s:8:"fileName";s:16:"site/scripts.htm";s:7:"content";s:84:"<script src="{{ [
+    'assets/js/jquery.min.js'
+]|theme }}"></script>
+{% scripts %}
+";s:5:"mtime";i:1513674330;s:6:"markup";s:83:"<script src="{{ [
+    'assets/js/jquery.min.js'
+]|theme }}"></script>
+{% scripts %}";s:4:"code";N;}}

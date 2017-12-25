@@ -1,0 +1,53 @@
+title = "视频中心"
+url = "/video/:page?"
+layout = "default"
+is_hidden = 0
+
+[blogPosts videoPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "video"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "video/index"
+postPage = "video/post"
+==
+{% put styles %}
+<link href="{{ 'assets/css/video.css'|theme }}" rel="stylesheet" />
+{% endput %}
+
+<div class="middle" id="middle">
+    <div class="middle_left">
+        <ul>
+            <li>
+                <div class="contact_us_active">
+                    <img src="{{ 'assets/img/ico_center.png'|theme }}" class="middle_left_img">
+                    <span class="middle_left_tittle">视频中心</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="middle_right">
+        <div class="middle_right_content1 middle_right_content">
+            <div class="jd-box">
+                <ul class="fix">
+
+                    {% for post in videoPosts.posts %}
+                    {% set image = post.featured_images.first %}
+                    <li>
+                        <a href="{{ post.url }}" target="_blank">
+                            <p>
+                                {% if image %}
+                                <img src="{{ image.path }}" width="358" height="220" alt="">
+                                {% endif %}
+                                <em></em>
+                            </p>
+                            <h5>{{ post.title }}</h5>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

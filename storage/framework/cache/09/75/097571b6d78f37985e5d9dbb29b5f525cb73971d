@@ -1,0 +1,27 @@
+1513912595a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:526:"[menu othermenu]
+start = "id-2"
+activeNode = 0
+listItemClasses = "item"
+primaryClasses = "nav nav-pills"
+secondaryClasses = "dropdown-menu"
+numberOfLevels = 1
+==
+<div class="head">
+    <div class="head_content" style="background-color: rgba(30, 30, 30, 0.8);">
+        <div class="head_top">
+            <div class="logo">
+                <a href="" class="logo_left"><img src="{{ 'assets/img/logo.png'|theme }}"></a>
+            </div>
+            {% component 'othermenu' %}
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1513742420;s:6:"markup";s:356:"<div class="head">
+    <div class="head_content" style="background-color: rgba(30, 30, 30, 0.8);">
+        <div class="head_top">
+            <div class="logo">
+                <a href="" class="logo_left"><img src="{{ 'assets/img/logo.png'|theme }}"></a>
+            </div>
+            {% component 'othermenu' %}
+        </div>
+    </div>
+</div>";s:4:"code";N;s:14:"menu othermenu";a:6:{s:5:"start";s:4:"id-2";s:10:"activeNode";s:1:"0";s:15:"listItemClasses";s:4:"item";s:14:"primaryClasses";s:13:"nav nav-pills";s:16:"secondaryClasses";s:13:"dropdown-menu";s:14:"numberOfLevels";s:1:"1";}}}

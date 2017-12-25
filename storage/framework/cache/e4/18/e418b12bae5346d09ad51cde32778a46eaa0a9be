@@ -1,0 +1,89 @@
+1513912595a:1:{s:14:"video/post.htm";a:11:{s:8:"fileName";s:14:"video/post.htm";s:7:"content";s:1482:"title = "视频内容"
+url = "/video/detail/:slug"
+layout = "default"
+description = "Viewing a single blog post"
+is_hidden = 0
+
+[blogPost videoPost]
+slug = "{{ :slug }}"
+categoryPage = "video/index"
+==
+<?php
+function onEnd()
+{
+    if ($this->post) {
+        $this->page->title = $this->post->title;
+    }
+    else {
+        return Redirect::to($this->pageUrl('404'));
+    }
+}
+?>
+==
+{% put styles %}
+<link href="{{ 'assets/css/list.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% set image = post.featured_images.first %}
+
+<div class="middle" id="middle">
+    <div class="middle_left">
+        <ul>
+            <li>
+                <div class="contact_us_active">
+                    <img src="{{ 'assets/img/ico_center.png'|theme }}" class="middle_left_img">
+                    <span class="middle_left_tittle">视频中心</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="middle_right">
+        <div class="middle_right_content1 middle_right_content">
+            <div class="contact_experience_text text">
+                <span class="text_p2">{{ post.title }}</span>
+            </div>
+            <div class="about_explain_content">
+                {{ post.content_html|raw }}
+                {% if image %}
+                <img style="max-width: 1000px" src="{{ image.path }}" alt="{{ post.title }}" />
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1513752038;s:6:"markup";s:1078:"{% put styles %}
+<link href="{{ 'assets/css/list.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% set image = post.featured_images.first %}
+
+<div class="middle" id="middle">
+    <div class="middle_left">
+        <ul>
+            <li>
+                <div class="contact_us_active">
+                    <img src="{{ 'assets/img/ico_center.png'|theme }}" class="middle_left_img">
+                    <span class="middle_left_tittle">视频中心</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="middle_right">
+        <div class="middle_right_content1 middle_right_content">
+            <div class="contact_experience_text text">
+                <span class="text_p2">{{ post.title }}</span>
+            </div>
+            <div class="about_explain_content">
+                {{ post.content_html|raw }}
+                {% if image %}
+                <img style="max-width: 1000px" src="{{ image.path }}" alt="{{ post.title }}" />
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>";s:4:"code";s:175:"function onEnd()
+{
+    if ($this->post) {
+        $this->page->title = $this->post->title;
+    }
+    else {
+        return Redirect::to($this->pageUrl('404'));
+    }
+}";s:5:"title";s:12:"视频内容";s:3:"url";s:19:"/video/detail/:slug";s:6:"layout";s:7:"default";s:11:"description";s:26:"Viewing a single blog post";s:9:"is_hidden";s:1:"0";s:18:"blogPost videoPost";a:2:{s:4:"slug";s:11:"{{ :slug }}";s:12:"categoryPage";s:11:"video/index";}}}

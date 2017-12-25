@@ -1,0 +1,70 @@
+1513912595a:1:{s:18:"business/index.htm";a:11:{s:8:"fileName";s:18:"business/index.htm";s:7:"content";s:1075:"title = "业务范围"
+url = "/business/:slug"
+layout = "default"
+is_hidden = 0
+
+[menu businessmenu]
+start = "id-24"
+activeNode = 0
+listItemClasses = "item"
+primaryClasses = "nav nav-pills"
+secondaryClasses = "dropdown-menu"
+numberOfLevels = 2
+
+[blogPost businessPost]
+slug = "{{ :slug }}"
+categoryPage = 404
+==
+<?php
+function onEnd()
+{
+    if ($this->post) {
+        $this->page->title = $this->post->title;
+    }
+    else {
+     return Redirect::to($this->pageUrl('404'));
+    }
+}
+?>
+==
+{% put styles %}
+<link href="{{ 'assets/css/list.css'|theme }}" rel="stylesheet" />
+{% endput %}
+
+<div class="middle" id="middle">
+    {% component 'businessmenu' %}
+    <div class="middle_right">
+        <div class="middle_right_content1 middle_right_content">
+            <div class="contact_experience_text text">
+                <span class="text_p2">{{ post.title }}</span>
+            </div>
+            <div class="about_explain_content">
+                {{ post.content_html|raw }}
+            </div>
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1513758188;s:6:"markup";s:557:"{% put styles %}
+<link href="{{ 'assets/css/list.css'|theme }}" rel="stylesheet" />
+{% endput %}
+
+<div class="middle" id="middle">
+    {% component 'businessmenu' %}
+    <div class="middle_right">
+        <div class="middle_right_content1 middle_right_content">
+            <div class="contact_experience_text text">
+                <span class="text_p2">{{ post.title }}</span>
+            </div>
+            <div class="about_explain_content">
+                {{ post.content_html|raw }}
+            </div>
+        </div>
+    </div>
+</div>";s:4:"code";s:172:"function onEnd()
+{
+    if ($this->post) {
+        $this->page->title = $this->post->title;
+    }
+    else {
+     return Redirect::to($this->pageUrl('404'));
+    }
+}";s:5:"title";s:12:"业务范围";s:3:"url";s:15:"/business/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:17:"menu businessmenu";a:6:{s:5:"start";s:5:"id-24";s:10:"activeNode";s:1:"0";s:15:"listItemClasses";s:4:"item";s:14:"primaryClasses";s:13:"nav nav-pills";s:16:"secondaryClasses";s:13:"dropdown-menu";s:14:"numberOfLevels";s:1:"2";}s:21:"blogPost businessPost";a:2:{s:4:"slug";s:11:"{{ :slug }}";s:12:"categoryPage";s:3:"404";}}}

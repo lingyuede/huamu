@@ -1,0 +1,119 @@
+1513912595a:1:{s:14:"news/index.htm";a:10:{s:8:"fileName";s:14:"news/index.htm";s:7:"content";s:2693:"title = "新闻动态"
+url = "/news/:page?"
+layout = "default"
+is_hidden = 0
+
+[blogPosts newsPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "news"
+postsPerPage = 1
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "news/index"
+postPage = "news/post"
+==
+{% put styles %}
+<link href="{{ 'assets/css/list.css'|theme }}" rel="stylesheet" />
+{% endput %}
+<div class="middle" id="middle">
+    <div class="middle_left">
+        <ul>
+            <li style="display: block;margin-bottom: 30px;">
+                <div class="contact_us_active">
+                    <img src="{{ 'assets/img/ico_center.png'|theme }}" class="middle_left_img">
+                    <span class="middle_left_tittle">新闻动态</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="middle_right">
+        <div class="middle_right_content1 middle_right_content">
+            <div class="news">
+                {% set posts = newsPosts.posts %}
+                {% for post in posts %}
+                {% set image = post.featured_images.first %}
+                <div class="list">
+                    {% if image %}
+                    <div class="pic_img"><img src="{{ image.path }}" width="210" height="118" alt="{{ post.title }}"/></div>
+                    {% endif %}
+                    <ul>
+                        <li><h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1></li>
+                        <li><p>{{ post.summary|raw }}</p></li>
+                        <li><a href="{{ post.url }}" class="red" title="{{ post.title }}">查看详细&gt;&gt;</a></li>
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="page" style="margin:50px auto;">
+                {% if posts.lastPage > 1 %}
+                    {% if posts.currentPage > 1 %}
+                  <a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}" class="pagination-prev">上一页</a>
+                    {% endif %}
+
+                    {% for page in 1..posts.lastPage %}
+                        <a class="{{ posts.currentPage == page ? 'active' : null }}" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                    {% endfor %}
+
+                    {% if posts.lastPage > posts.currentPage %}
+                    <a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}" class="pagination-next">下一页</a>
+                    {% endif %}
+
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1513754516;s:6:"markup";s:2391:"{% put styles %}
+<link href="{{ 'assets/css/list.css'|theme }}" rel="stylesheet" />
+{% endput %}
+<div class="middle" id="middle">
+    <div class="middle_left">
+        <ul>
+            <li style="display: block;margin-bottom: 30px;">
+                <div class="contact_us_active">
+                    <img src="{{ 'assets/img/ico_center.png'|theme }}" class="middle_left_img">
+                    <span class="middle_left_tittle">新闻动态</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="middle_right">
+        <div class="middle_right_content1 middle_right_content">
+            <div class="news">
+                {% set posts = newsPosts.posts %}
+                {% for post in posts %}
+                {% set image = post.featured_images.first %}
+                <div class="list">
+                    {% if image %}
+                    <div class="pic_img"><img src="{{ image.path }}" width="210" height="118" alt="{{ post.title }}"/></div>
+                    {% endif %}
+                    <ul>
+                        <li><h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1></li>
+                        <li><p>{{ post.summary|raw }}</p></li>
+                        <li><a href="{{ post.url }}" class="red" title="{{ post.title }}">查看详细&gt;&gt;</a></li>
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="page" style="margin:50px auto;">
+                {% if posts.lastPage > 1 %}
+                    {% if posts.currentPage > 1 %}
+                  <a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}" class="pagination-prev">上一页</a>
+                    {% endif %}
+
+                    {% for page in 1..posts.lastPage %}
+                        <a class="{{ posts.currentPage == page ? 'active' : null }}" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                    {% endfor %}
+
+                    {% if posts.lastPage > posts.currentPage %}
+                    <a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}" class="pagination-next">下一页</a>
+                    {% endif %}
+
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+</div>";s:4:"code";N;s:5:"title";s:12:"新闻动态";s:3:"url";s:12:"/news/:page?";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:19:"blogPosts newsPosts";a:7:{s:10:"pageNumber";s:11:"{{ :page }}";s:14:"categoryFilter";s:4:"news";s:12:"postsPerPage";s:1:"1";s:14:"noPostsMessage";s:14:"No posts found";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:10:"news/index";s:8:"postPage";s:9:"news/post";}}}

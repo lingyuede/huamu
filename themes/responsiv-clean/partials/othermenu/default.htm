@@ -1,0 +1,12 @@
+<style>
+    .head_right li:last-child span{display: none}
+</style>
+{% if parentNode and parentNode.getChildCount %}
+<ul class="head_right">
+    {% for primaryNav in parentNode.getChildren %}
+    {% if primaryNav.enabled %}
+    <li><a href="{{ primaryNav.getLinkHref }}" class="tittle_a {{ primaryNav.getListItemClasses(activeLeft, activeRight) }}">{{ primaryNav.title }}</a><span class="head_right_division">|</span></li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}

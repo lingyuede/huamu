@@ -1,0 +1,79 @@
+1513912766a:1:{s:19:"negotiate/index.htm";a:9:{s:8:"fileName";s:19:"negotiate/index.htm";s:7:"content";s:1583:"title = "商务洽谈"
+url = "/negotiate"
+layout = "default"
+is_hidden = 0
+
+==
+{% put styles %}
+<link href="{{ 'assets/css/list.css'|theme }}" rel="stylesheet" />
+{% endput %}
+
+<div class="middle" id="middle">
+    <div class="middle_left">
+        <ul>
+            <li>
+                <div class="contact_us_active">
+                    <img src="{{ 'assets/img/ico_center.png'|theme }}" class="middle_left_img">
+                    <span class="middle_left_tittle">商务洽谈</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="middle_right">
+        <div class="middle_right_content1 middle_right_content">
+            <div class="contact_experience_text text">
+                <span class="text_p2">商务洽谈</span>
+            </div>
+            <div class="about_explain_content">
+                <div class="about" style="padding-top:200px 0px">
+                    <div style="width:50%; float:left">
+                        <br><br>
+                        <p>地址：江苏省如皋市花城大道399号</p><br>
+                        <p>联系人：徐女士、李先生</p><br>
+                        <p>座机：0513-88550388   </p><br>
+                        <p>传真：0513-87192888</p>
+                    </div>
+                    <div style="width:50%; float:left; text-align:center">
+                        <img width="250px" src="{{ 'assets/img/二维码.jpg'|theme }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1513912165;s:6:"markup";s:1498:"{% put styles %}
+<link href="{{ 'assets/css/list.css'|theme }}" rel="stylesheet" />
+{% endput %}
+
+<div class="middle" id="middle">
+    <div class="middle_left">
+        <ul>
+            <li>
+                <div class="contact_us_active">
+                    <img src="{{ 'assets/img/ico_center.png'|theme }}" class="middle_left_img">
+                    <span class="middle_left_tittle">商务洽谈</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="middle_right">
+        <div class="middle_right_content1 middle_right_content">
+            <div class="contact_experience_text text">
+                <span class="text_p2">商务洽谈</span>
+            </div>
+            <div class="about_explain_content">
+                <div class="about" style="padding-top:200px 0px">
+                    <div style="width:50%; float:left">
+                        <br><br>
+                        <p>地址：江苏省如皋市花城大道399号</p><br>
+                        <p>联系人：徐女士、李先生</p><br>
+                        <p>座机：0513-88550388   </p><br>
+                        <p>传真：0513-87192888</p>
+                    </div>
+                    <div style="width:50%; float:left; text-align:center">
+                        <img width="250px" src="{{ 'assets/img/二维码.jpg'|theme }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>";s:4:"code";N;s:5:"title";s:12:"商务洽谈";s:3:"url";s:10:"/negotiate";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}

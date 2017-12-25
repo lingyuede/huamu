@@ -1,0 +1,24 @@
+1513912595a:1:{s:21:"othermenu/default.htm";a:5:{s:8:"fileName";s:21:"othermenu/default.htm";s:7:"content";s:473:"<style>
+    .head_right li:last-child span{display: none}
+</style>
+{% if parentNode and parentNode.getChildCount %}
+<ul class="head_right">
+    {% for primaryNav in parentNode.getChildren %}
+    {% if primaryNav.enabled %}
+    <li><a href="{{ primaryNav.getLinkHref }}" class="tittle_a {{ primaryNav.getListItemClasses(activeLeft, activeRight) }}">{{ primaryNav.title }}</a><span class="head_right_division">|</span></li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}
+";s:5:"mtime";i:1513743127;s:6:"markup";s:472:"<style>
+    .head_right li:last-child span{display: none}
+</style>
+{% if parentNode and parentNode.getChildCount %}
+<ul class="head_right">
+    {% for primaryNav in parentNode.getChildren %}
+    {% if primaryNav.enabled %}
+    <li><a href="{{ primaryNav.getLinkHref }}" class="tittle_a {{ primaryNav.getListItemClasses(activeLeft, activeRight) }}">{{ primaryNav.title }}</a><span class="head_right_division">|</span></li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}";s:4:"code";N;}}

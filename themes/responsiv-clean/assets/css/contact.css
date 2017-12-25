@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+body{
+	font-family: "微软雅黑";
+}
+
+.tittle_contact{
+	color: #29AF82 !important;
+}
+.middle{
+	width: 1240px;
+	margin: 0 auto;
+	padding-top: 100px;
+	margin-bottom: 90px;
+	display: flex;
+	justify-content: space-between;
+}
+.middle_left li{
+	display: flex;
+	align-items: center;
+	color: #374550;
+	
+	font-size: 18px;
+	margin-bottom: 50px;
+	cursor: pointer;
+}
+.middle_left li div{
+	display: flex;
+	align-items: center;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #49494d;
+}
+.middle_left_img{
+	width: 18px;
+	height: 18px;
+}
+.middle_left li span{
+	padding-left: 12px;
+}
+.contact_us_active{
+	color: #29AF82;
+  border-color: #29AF82 !important;
+}
+.middle_right{
+	width: 960px;
+	
+}
+.text{
+	font-size: 24px;
+	color: #374550;
+	text-align: center;
+	line-height: 36px;
+}
+.text_p1{
+	margin-bottom: 2px;
+}
+.text_p2{
+	color: #3cb68e;
+	padding-bottom: 26px;
+	border-bottom: 2px solid #29AF82;
+}
+.experience_content{
+	margin-top: 96px;
+}
+.cooperation_content
+.experience_content_txt{
+	color: #9C9D9D;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: center;
+}
+.experience_content_li2{
+	display: flex;
+	justify-content: space-between;
+	background-color: #fcfafa;
+	margin-top: 70px;
+	margin-bottom: 26px;
+}
+.experience_content_li2 div{
+	width: 600px;
+	height: 144px;
+	color: #717474;
+	font-size: 16px;
+	border: 1px solid #717474;
+	margin: 0 auto;
+	margin-top: 67px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+}
+.people_yang{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+.experience_content_li2 p{
+	padding-left: 20px;
+	line-height: 30px;
+}
+.experience_content_li2_p1{
+	text-align: center;
+}
+.experience_content_li2_p1{
+	position: relative;
+	top: -20px;
+}
+.experience_content_li2_p1 span{
+	
+	background-color: #FCFAFA;
+	font-size: 20px;
+	padding: 0 10px;
+}
+.experience_content_li2_p3{
+	margin-bottom: 40px;
+}
+.phone_num{
+	font-size: 18px;
+	color: #29AF82;
+	text-decoration: underline;
+}
+.cooperation_content{
+	margin-top: 82px;
+}
+.cooperation_content_li1{
+	display: flex;
+	justify-content: space-between;
+}
+.cooperation_content_li1 div{
+	width: 368px;
+	height: 116px;
+	border: 1px solid #B2B2B2;
+	color: #9C9D9D;
+	font-size: 16px;
+	padding: 0 10px;
+	line-height: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.phone_p{
+	position: relative;
+	top: -20px;
+	left: 50px;
+	width: 48px;
+	height: 30px;
+	background-color: #FFFFFF;
+	text-align: center;
+}
+.cooperation_content_li2{
+	display: flex;
+	justify-content: space-between;
+	font-size: 16px;
+	color: #9C9D9D;
+	margin-top: 40px;
+	margin-bottom: 36px;
+}
+.cooperation_content_li2 p{
+	display: flex;
+	align-items: center;
+}
+.dingwei_span{
+	margin-left: 14px;
+}
+.jobs{
+	margin-top: 102px;
+	color: #9C9D9D;
+	font-size: 16px;
+}
+.job1{
+	padding-bottom: 63px;
+	border-bottom: 1px solid #f5f0f0;
+}
+.job_ul_li1{
+	display: flex;
+	align-items: center;
+	margin-bottom: 44px;
+}
+.submit_job{
+	display: block;
+	width: 172px;
+	height: 36px;
+	border-radius: 18px;
+	font-size: 16px;
+	color: #FFFFFF;
+	background-color: #29AF82;
+	text-align: center;
+	line-height: 36px;
+	margin-left: 96px;
+	
+}
+.job_ul_li1 span{
+	font-size: 24px;
+}
+.job_ul_li li{
+	line-height: 30px;
+}
+.job_ul_li2{
+	margin-bottom: 38px;
+}
+.job_ul_li2_ol li:first-child{
+	font-size: 18px;
+	color: #8c8e8e;
+}
+.job2{
+	margin-top: 45px;
+}
+
+.win_code{
+	position: fixed;
+	width: 185px;
+	height: 300px;
+	top: 450px;
+	right: 0px;
+	transition: all 1s;
+}
+
+.float_win,
+.float_close{
+	display: block;
+}
+.float_win{
+	height:275px;
+	width: 190px;
+	margin: 0 auto;
+
+}
+
+.float_close{
+	height: 18px;
+	width: 18px;
+	margin-left: 90px;
+}
+
+.win_code_show{
+	opacity: 0;
+}

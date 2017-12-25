@@ -1,0 +1,22 @@
+{% if parentNode and parentNode.getChildCount %}
+<div class="nav rosa-nav-a">
+    {% for primaryNav in parentNode.getChildren %}
+    {% if primaryNav.enabled %}
+    <div  class="{{ primaryNav.getListItemClasses(activeLeft, activeRight) }} newA">
+        <a href="{{ primaryNav.getLinkHref }}" class="newAA"> {{ primaryNav.title }}</a>
+        {% if primaryNav.getChildCount and numberOfLevels > 1 %}
+        <div class="pop-div">
+            <ul class="pop-ul">
+                {% for secondaryNav in primaryNav.getChildren %}
+                {% if secondaryNav.enabled %}
+                <li><a href="{{ secondaryNav.getLinkHref }}"> {{ secondaryNav.title }}</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endif %}

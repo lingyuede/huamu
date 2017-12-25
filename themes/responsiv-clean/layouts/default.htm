@@ -1,0 +1,19 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        {% partial 'site/meta' %}
+    </head>
+    <body>
+        <div class="wrap">
+        {% partial 'site/header' %}
+
+        {% page %}
+
+        </div>
+        {% partial 'site/footer' %}
+        <!-- Scripts -->
+        {% partial 'site/scripts' %}
+    </body>
+</html>
